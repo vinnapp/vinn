@@ -1,0 +1,66 @@
+name: 🐞 Bug Report / Hata Bildirimi
+description: Report a bug or issue in the app / Uygulamadaki bir hatayı bildirin
+title: "[BUG] "
+labels: [bug]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Title / Başlık
+      description: Quick summary / Kısa özet
+      placeholder: "e.g. Login button does not respond"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform / Platform
+      description: Affected platform / Etkilenen platform
+      options:
+        - Web
+        - iOS
+        - Android
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce / Tekrarlamak için Adımlar
+      description: Provide step-by-step instructions / Adım adım açıklayın
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected / Beklenen
+      description: What should happen / Ne olmalıydı
+      placeholder: "e.g. The page should redirect to the dashboard"
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual / Gerçekleşen
+      description: What actually happened / Ne oldu
+      placeholder: "e.g. The page stays on login and shows no error"
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot (if any) / Ekran görüntüsü (varsa)
+      description: Paste or drag-and-drop images here / Görselleri buraya bırakabilirsiniz
+      placeholder: "Attach screenshot if available / Görüntü ekleyin (isteğe bağlı)"
+    validations:
+      required: false
